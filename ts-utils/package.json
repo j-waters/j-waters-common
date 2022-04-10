@@ -1,0 +1,19 @@
+{
+  "name": "@j-waters/ts-utils",
+  "version": "0.0.3",
+  "main": "lib/index.ts",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "publish-lib": "build && npm publish",
+    "publish-beta": "build && npm publish --tag beta",
+    "publish-dryrun": "build && npm publish --dry-run"
+  },
+  "dependencies": {
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {}
+}

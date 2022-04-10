@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "workspaces": [
+    "vue-utils",
+    "ts-utils",
+    "nest-utils"
+  ],
+  "scripts": {
+    "release": "release-it",
+    "build": "yarn workspaces foreach run build"
+  },
+  "devDependencies": {
+    "release-it": "*",
+    "release-it-yarn-workspaces": "^2.0.1"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-yarn-workspaces": true
+    },
+    "npm": false,
+    "hooks": {
+      "after:bump": "yarn workspaces run build"
+    }
+  },
+  "version": "0.0.3"
+}

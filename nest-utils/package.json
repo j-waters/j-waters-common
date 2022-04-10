@@ -1,0 +1,27 @@
+{
+  "name": "@j-waters/nest-utils",
+  "version": "0.0.3",
+  "main": "lib/index.ts",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "publish-lib": "build && npm publish",
+    "publish-beta": "build && npm publish --tag beta",
+    "publish-dryrun": "build && npm publish --dry-run"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^8.4.4",
+    "@nestjs/graphql": "^9.1.2",
+    "graphql": "^16.3.0",
+    "mongodb": "^4.5.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^8.4.4",
+    "@nestjs/graphql": "^9.1.2",
+    "graphql": "^16.3.0",
+    "mongodb": "^4.5.0"
+  }
+}
