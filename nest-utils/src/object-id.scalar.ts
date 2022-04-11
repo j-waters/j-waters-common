@@ -1,8 +1,8 @@
-import { ObjectId } from 'mongodb';
+import { ObjectId } from 'bson';
 import { CustomScalar, Scalar } from '@nestjs/graphql';
 import { Kind, ValueNode } from 'graphql';
 
-@Scalar('ObjectId', (type) => ObjectId)
+@Scalar('ObjectId', () => ObjectId)
 export class ObjectIdScalar implements CustomScalar<string, ObjectId> {
     description = 'ObjectId custom scalar type';
 
