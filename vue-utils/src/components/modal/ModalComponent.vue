@@ -25,6 +25,12 @@ const show = ref(false);
 onMounted(() => nextTick(() => (show.value = true)));
 </script>
 
+<script lang="ts">
+export default {
+  name: 'ModalComponent',
+}
+</script>
+
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
