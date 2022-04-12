@@ -22,5 +22,5 @@
       "after:bump": "yarn workspaces run build"
     }
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
