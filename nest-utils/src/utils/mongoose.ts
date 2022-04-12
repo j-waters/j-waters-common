@@ -31,12 +31,12 @@ export function assertIsDocArray<T>(
 export function asDoc<T>(
     doc: T | Ref<T>,
 ): DocumentType<Exclude<T, Types.ObjectId>> {
-    assertIsDoc(doc);
+    assertIsDoc<T>(doc);
     return doc;
 }
 
 export function asDocArray<T>(docs: (T | Ref<T>)[]): DocumentType<T>[] {
-    assertIsDocArray(docs);
+    assertIsDocArray<T>(docs);
     return docs;
 }
 
@@ -44,6 +44,6 @@ export function getId(doc: Ref<{ id: string }>): string {
     return isDoc(doc) ? doc.id.toString() : doc?.toString();
 }
 
-export function getObjectId(doc: Ref<{ id: string }>): Types.ObjectId {
-    return new mongoose.Types.ObjectId(getId(doc));
-}
+// export function getObjectId(doc: Ref<{ id: string }>): Types.ObjectId {
+//     return new mongoose.Types.ObjectId(getId(doc));
+// }
