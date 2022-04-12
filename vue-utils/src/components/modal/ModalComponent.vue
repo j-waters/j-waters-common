@@ -12,9 +12,9 @@
 <script lang="ts" setup>
 import { nextTick, onMounted, ref } from "vue";
 
-const props = defineProps<{
-  extraClass: string
-}>()
+const props = withDefaults(defineProps<{
+  extraClass?: string
+}>(), {extraClass: ''})
 
 const emit = defineEmits<{
   (e: "close"): void;
@@ -23,12 +23,6 @@ const emit = defineEmits<{
 const show = ref(false);
 
 onMounted(() => nextTick(() => (show.value = true)));
-</script>
-
-<script lang="ts">
-export default {
-  name: 'ModalComponent',
-}
 </script>
 
 <style scoped>
