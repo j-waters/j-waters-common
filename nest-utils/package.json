@@ -1,6 +1,6 @@
 {
  "name": "@j-waters/nest-utils",
- "version": "0.0.5",
+ "version": "0.1.0",
  "main": "dist/index.js",
  "typings": "dist/index.d.ts",
  "files": [
@@ -24,8 +24,8 @@
   "@nestjs/graphql": "^9.1.2",
   "graphql": "^16.3.0",
   "mongodb": "^4.5.0",
-	 "mongoose": "^6.2.10",
-	 "@typegoose/typegoose": "^9.7.1"
+  "mongoose": "^6.2.10",
+  "@typegoose/typegoose": "^9.7.1"
  },
  "author": "James Waters",
  "module": "dist/ts-utils.esm.js",
@@ -50,7 +50,7 @@
   "@nestjs/graphql": "^9.1.2",
   "graphql": "^15.0.0",
   "mongodb": "^4.5.0",
-	 "mongoose": "^6.2.10",
-	 "@typegoose/typegoose": "^9.7.1"
+  "mongoose": "^6.2.10",
+  "@typegoose/typegoose": "^9.7.1"
  }
 }
