@@ -1,8 +1,8 @@
 <template>
   <div class="modal modal-open" @click.self="emit('close')">
     <div class="modal-box" :class="extraClass">
-      <p><slot /></p>
-      <div class="modal-action">
+      <p><slot >{{bodyText}}</slot></p>
+      <div v-if="$slots.footer" class="modal-action">
         <slot name="footer" />
       </div>
     </div>
@@ -14,6 +14,7 @@ import { nextTick, onMounted, ref } from "vue";
 
 const props = withDefaults(defineProps<{
   extraClass?: string
+  bodyText?: string;
 }>(), {extraClass: ''})
 
 const emit = defineEmits<{
