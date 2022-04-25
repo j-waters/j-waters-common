@@ -26,7 +26,7 @@ export function getInterval(start?: Date, end?: Date): IntervalSize {
     end = end ?? new Date();
 
     const diff = differenceInDays(end, start);
-    if (diff < 7) {
+    if (diff < 6) {
         return IntervalSize.DAY;
     } else if (diff < 20) {
         return IntervalSize.WEEK;
