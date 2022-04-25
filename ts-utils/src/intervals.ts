@@ -13,6 +13,7 @@ import {
     startOfWeek,
     startOfYear,
 } from "date-fns";
+import enGB from "date-fns/locale/en-GB";
 
 export enum IntervalSize {
     DAY = "DAY",
@@ -58,7 +59,9 @@ export function snapToEndOfPeriod(date: Date, interval: IntervalSize) {
         case IntervalSize.DAY:
             return endOfDay(date);
         case IntervalSize.WEEK:
-            return endOfWeek(date);
+            return endOfWeek(date, {
+                locale: enGB,
+            });
         case IntervalSize.MONTH:
             return endOfMonth(date);
         case IntervalSize.YEAR:
@@ -73,7 +76,9 @@ export function snapToStartOfPeriod(date: Date, interval: IntervalSize) {
         case IntervalSize.DAY:
             return startOfDay(date);
         case IntervalSize.WEEK:
-            return startOfWeek(date);
+            return startOfWeek(date, {
+                locale: enGB,
+            });
         case IntervalSize.MONTH:
             return startOfMonth(date);
         case IntervalSize.YEAR:
