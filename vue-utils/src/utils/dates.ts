@@ -1,8 +1,7 @@
-// Authors: James Waters
-import { format as format_ } from "date-fns";
-import enGB from "date-fns/locale/en-GB";
+import { format as format_ } from 'date-fns';
+import enGB from 'date-fns/locale/en-GB';
 
-export function format(date: Date, formatStr = "PP"): string {
+function format(date: Date, formatStr = "PP"): string {
     return format_(date, formatStr, {
         locale: enGB,
     });
@@ -16,8 +15,8 @@ export function formatDateTimeS(date: Date | string) {
     return format(parseDate(date), "yyyy-MM-dd HH:mm:ss");
 }
 
-export function formatDate(date: Date | string) {
-    return format(parseDate(date), "yyyy-MM-dd");
+export function formatDate(date: Date | string, formatStr = "yyyy-MM-dd") {
+    return format(parseDate(date), formatStr);
 }
 
 function parseDate(date: Date | string) {
