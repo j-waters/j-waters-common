@@ -1,6 +1,6 @@
 {
   "name": "@j-waters/vue-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "files": [
     "dist"
   ],
@@ -21,8 +21,8 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@j-waters/vue-utils": "^0.2.1",
-    "@j-waters/ts-utils": "^0.2.1",
+    "@j-waters/vue-utils": "^0.2.2",
+    "@j-waters/ts-utils": "^0.2.2",
     "vue": "^3.2.32",
     "merge-anything": "^5.0.2",
     "chroma-js": "^2.4.2",
