@@ -6,7 +6,7 @@
         v-for="(modal, index) in activeModals"
         :key="modal.id"
         v-bind="modal.props"
-        @close="removeModal(index)"
+        @close="removeModal(index, $event)"
       />
     </transition-group>
   </suspense>
@@ -16,8 +16,6 @@
 import { useModalRoot } from "@/utils/modal";
 
 const { activeModals, removeModal } = useModalRoot();
-
-console.log("hello");
 </script>
 
 <style scoped>
